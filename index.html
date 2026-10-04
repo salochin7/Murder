@@ -66,6 +66,7 @@
     h2 { font-size:clamp(48px,7vw,88px); line-height:.9; letter-spacing:-.015em; }
     .links { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-top:1px solid var(--line); border-left:1px solid var(--line); }
     .link-card { min-height:136px; padding:27px 31px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; align-items:center; gap:20px; transition:background .2s; }
+    .link-card--community { grid-column:1 / -1; }
     .link-card:hover { background:#221d1f; }
     .link-index { align-self:flex-start; color:#936e70; font-size:12px; font-weight:700; }
     .link-title { font:800 clamp(30px,3.4vw,48px)/1 "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.015em; }
@@ -141,10 +142,11 @@
         <div><h2 id="links-title">Find your way in.</h2></div>
       </div>
       <div class="links">
-        <a class="link-card" href="https://www.youtube.com/@crowanoke" target="_blank" rel="noopener noreferrer"><span class="link-index">01</span><span><span class="link-title">YouTube</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
-        <a class="link-card" href="https://discord.gg/WAJ4MaE2zW" target="_blank" rel="noopener noreferrer"><span class="link-index">02</span><span><span class="link-title">Discord</span><span class="link-desc">The Crows Tavern</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
-        <a class="link-card" href="https://www.instagram.com/quidcrowquo" target="_blank" rel="noopener noreferrer"><span class="link-index">03</span><span><span class="link-title">Instagram</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
-        <a class="link-card" href="https://x.com/quidcrowquo" target="_blank" rel="noopener noreferrer"><span class="link-index">04</span><span><span class="link-title">X / Twitter</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        <a class="link-card link-card--community" href="https://discord.gg/WAJ4MaE2zW" target="_blank" rel="noopener noreferrer"><span class="link-index">01</span><span><span class="link-title">Discord</span><span class="link-desc">The Crows Tavern</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        <a class="link-card" href="https://www.youtube.com/@crowanoke" target="_blank" rel="noopener noreferrer"><span class="link-index">02</span><span><span class="link-title">YouTube</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        <a class="link-card" href="https://www.tiktok.com/@crowanoke" target="_blank" rel="noopener noreferrer"><span class="link-index">03</span><span><span class="link-title">TikTok</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        <a class="link-card" href="https://www.instagram.com/quidcrowquo" target="_blank" rel="noopener noreferrer"><span class="link-index">04</span><span><span class="link-title">Instagram</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        <a class="link-card" href="https://x.com/quidcrowquo" target="_blank" rel="noopener noreferrer"><span class="link-index">05</span><span><span class="link-title">X / Twitter</span></span><span class="link-arrow" aria-hidden="true">↗</span></a>
       </div>
     </section>
     <section class="feature" id="shop" aria-labelledby="shop-title">
