@@ -18,12 +18,15 @@
   ].map(([name, offset]) => [asset(name), offset]));
   [...new Set([...climb, ...cruise, ...dive, perched])].forEach(src => { const preload = new Image(); preload.src = src; });
 
-  const crow = document.createElement('img');
+  const crow = document.createElement('div');
   crow.className = 'crow-companion';
-  crow.src = cruise[0];
-  crow.alt = '';
+  function setPose(src) {
+    const image = `url("${src}")`;
+    crow.style.maskImage = image;
+    crow.style.webkitMaskImage = image;
+  }
+  setPose(cruise[0]);
   crow.setAttribute('aria-hidden', 'true');
-  crow.draggable = false;
   document.body.append(crow);
 
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -102,7 +105,7 @@
 
     if (state === 'landing' && distance < 2.5 && Math.hypot(vx, vy) < 18) {
       x = perchX; y = perchY; vx = vy = 0;
-      crow.src = perched;
+      setPose(perched);
       lastFrame = perched;
       frameOffset = [0, 0];
       state = 'perched';
@@ -114,7 +117,7 @@
       const frame = Math.floor(now / cadence) % sequence.length;
       const frameKey = sequence[frame];
       if (frameKey !== lastFrame) {
-        crow.src = frameKey;
+        setPose(frameKey);
         lastFrame = frameKey;
         frameOffset = bodyOffset.get(frameKey) || [0, 0];
       }
